@@ -1,0 +1,16 @@
+<!-- Template Driven Form in Angular -->
+<div class="bg-light py-2 px-3 mb-3">
+  <form action="" #myForm="ngForm"> 
+    <div class="form-group mb-2">
+        <label for="todo_title" class="form-label">Task Name</label>
+        <input id="todo_title" name="title" [(ngModel)]="newTodoTitle" placeholder="Enter title here..." class="form-control"> 
+    </div>
+    <div class="form-group mb-2">
+        <label for="todo_description" class="form-label">Task Description</label>
+        <input id="todo_description" name="description" [(ngModel)]="newTodoDesc" placeholder="Enter description here..." class="form-control"> 
+    </div>
+  
+      <button type="button" (click)="addTodo()" class="btn btn-primary px-3 py-2 my-2">Add Todo</button>
+  </form>
+    
+</div>

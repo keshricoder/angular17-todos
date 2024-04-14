@@ -1,0 +1,26 @@
+<!-- update-todo-modal.component.html -->
+<div class="modal" id="updateTodoModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Update Todo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Form to update todo item -->
+          <form (ngSubmit)="updateTodo()">
+            <div class="form-group mb-2">
+              <label for="updateTitle">Title</label>
+              <input type="text" class="form-control" id="updateTitle" [(ngModel)]="updatedTitle" name="updatedTitle">
+            </div>
+            <div class="form-group mb-2">
+              <label for="updateDescription">Description</label>
+              <input type="text" class="form-control" id="updateDescription" [(ngModel)]="updatedDescription" name="updatedDescription">
+            </div>
+            <button type="submit" class="btn btn-primary my-2">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

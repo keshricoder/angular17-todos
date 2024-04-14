@@ -1,0 +1,14 @@
+<li class="list-item d-flex justify-content-between align-items-center">
+    <div class="mx-2">
+      <input type="checkbox" [checked]="todo.status" (change)="onToggle()" class="form-check-input">
+    </div>
+    <div class="d-flex flex-column pt-3">
+      <h6 class="text-dark mb-1">{{todo.title}}</h6>
+      <p class="text-muted">{{todo.description}}</p>
+    </div>
+    <div class="mx-2">
+      <button (click)="openUpdateModal(todo)" class="btn btn-info rounded-2 px-2 mx-1 text-light mb-2" data-bs-target="#updateTodoModal" data-bs-toggle="modal">Update</button>
+      <button (click)="onRemove()" class="btn btn-danger rounded-2 px-2 mx-1 text-light">Remove</button>
+    </div>
+</li>
+  

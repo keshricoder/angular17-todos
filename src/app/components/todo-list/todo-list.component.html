@@ -1,0 +1,10 @@
+<div class="card rounded-3">
+    <div class="card-header">
+        <h4 class="text-center text-danger py-2">Your ToDos List</h4>
+    </div>
+    <div class="card-body px-3 py-3">
+        <ul *ngFor="let todo of todos" class="todo-list">
+            <app-todo-item [todo]="todo" (toggle)="toggleTodo.emit(todo.id)" (remove)="removeTodo.emit(todo.id)"></app-todo-item>
+        </ul>
+    </div>
+</div>
